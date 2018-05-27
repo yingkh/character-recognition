@@ -4,8 +4,8 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400, 700" rel="stylesheet">
-			<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-			<link href="/assets/css/fontawesome-all.css" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="{{ "/assets/css/main.css" | relative_url }}">
+			<link href="{{ "/assets/css/fontawesome-all.css" | relative_url }}" rel="stylesheet">
 		</head>
 		<body>
 			<ui class="topnav">
@@ -13,7 +13,7 @@
 				<li class="link-item right-align"><a href="/about">About</a></li>
 			</ui>
 			<div class="header">
-				<a href="/"><img class="imgheader" src="{{site.url}}/assets/img/project-cover-picture.png"></img></a>
+				<a href="/"><img class="imgheader" src="{{ "/assets/img/project-cover-picture.png" | relative_url }}"></img></a>
 			</div>
 			<div class="container">
 				{{ content }}
@@ -21,7 +21,7 @@
 			<footer>
 				<div class="footer-container">
 					<div class="footer-left">
-						<img src="/assets/img/eInfinity_public.svg" height="150" width="150" style="background-color: white"/>
+						<img src="{{ "/assets/img/eInfinity_public.svg" | relative_url }}" height="150" width="150" style="background-color: white"/>
 					</div>
 					<div class="footer-main">
 						<p>Connect with me!</p>
