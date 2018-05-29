@@ -22,6 +22,10 @@ title: The Case of Trying to Recognise Characters From Colour Images
   Through this project I came to understand the challenges that can surface in building a neural network model and help me
   to discover what it takes to deep dive into deep learning and any applications that use such technologies.
 </p>
+<div class="frame-image">
+    <img src="/assets/img/neural_network.png"></img>
+    This diagram presents my first impression of the neural network.
+</div>
 <h3>How I could generate the training and testing set?</h3>
 <p>
   Although there are available dataset for downloading for this project, I will explain here on how this dataset can
@@ -36,6 +40,15 @@ title: The Case of Trying to Recognise Characters From Colour Images
   by changing the font and then exporting each characters as an image, I will be able to generate the required dataset. In
   this way I will be able to get a well balanced dataset.
 </p>
+<div class="frame-image">
+    <img src="/assets/img/ct_dataset.png"></img>
+    Sample of the characters that are generated using computer. (Source: <strong><a href="http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/">Chars74k</a></strong>)
+</div>
+<br />
+<div class="frame-image">
+    <img src="/assets/img/nt_dataset.png"></img>
+    Sample of the characters that are found "naturally". Some characters shown here are obtained from <strong><a href="http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/">Chars74k</a></strong>
+</div>
 <h3>Building the model</h3>
 <p>
   Since both the training set and the test set are images and I'm doing recognition, the key approach for selecting the
@@ -70,10 +83,14 @@ title: The Case of Trying to Recognise Characters From Colour Images
 <p>
   There are serveral other limitations of the model in recognising characters. One of which is that it cannot recognise rotated characters.
   This is especially when it cannot distingush between rotated characters or another character (among the famous set of characters that can cause
-  the confusion are "E", "M", "W" and "3"). Another limitation of the model is there are certain classes of fonts that the model cannot be recognised
+  the confusion are "E", "M", "3" and "W"). Another limitation of the model is there are certain classes of fonts that the model cannot be recognised
   as they are not included in the training set. These classes of fonts are cursive script and outlined fonts. It's important to include outlined fonts in
   the next iteration of building the model as such fonts can appear especially when the letters are made of neon light tubes.
 </p>
+<div class="frame-image">
+    <img src="/assets/img/em3w_rotation.svg"></img>
+    A classical example of how rotated images can result in machine unable to recognise between rotated E and E, M, 3 or W.
+</div>
 <p>
   So what are the things that can be done to improve the model to the point that it can be used to build the abovementioned application? In addition to
   considering adding new fonts to the dataset, it's important to develop the image preprocessing component which can turn coloured characters to a black

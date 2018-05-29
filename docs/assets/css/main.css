@@ -12,7 +12,7 @@ body {
     max-width: 1280px;
     min-height: 100%;
     margin: auto;
-    background: #ddd;
+    background: #eee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,6 +96,20 @@ img.center{
 
 .container{
   grid-row: 3 / 4;
+}
+
+div.frame-image{
+  width: 50%;
+  margin: auto;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+div.frame-image img{
+  display: block;
+  max-width: 100%;
+  border: 1px solid black;
+  margin: auto;
 }
 
 footer{
